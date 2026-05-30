@@ -1,10 +1,14 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import HeroSection from '@/components/landing/HeroSection'
-import AboutSection from '@/components/landing/AboutSection'
-import FeaturesSection from '@/components/landing/FeaturesSection'
-import GallerySection from '@/components/landing/GallerySection'
-import ShopPreviewSection from '@/components/landing/ShopPreviewSection'
+import GameInfoStrip from '@/components/ui/GameInfoStrip'
+import HeroSection from '@/components/sections/HeroSection'
+import StorySection from '@/components/sections/StorySection'
+import GameplaySection from '@/components/sections/GameplaySection'
+import EpisodeSection from '@/components/sections/EpisodeSection'
+import CharactersSection from '@/components/sections/CharactersSection'
+import FolkloreSection from '@/components/sections/FolkloreSection'
+import MediaSection from '@/components/sections/MediaSection'
+import CommunitySection from '@/components/sections/CommunitySection'
 
 export default function HomePage() {
   return (
@@ -12,10 +16,14 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
-        <AboutSection />
-        <FeaturesSection />
-        <GallerySection />
-        <ShopPreviewSection />
+        <GameInfoStrip />
+        <StorySection />
+        <GameplaySection />
+        <EpisodeSection />
+        <CharactersSection />
+        <FolkloreSection />
+        <MediaSection />
+        <CommunitySection />
       </main>
       <Footer />
     </>

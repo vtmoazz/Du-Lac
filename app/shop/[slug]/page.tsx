@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { supabase } from '@/lib/supabase'
+import { isSupabaseConfigured, supabase } from '@/lib/supabase'
 import Badge from '@/components/ui/Badge'
 import AddToCartButton from '@/components/shop/AddToCartButton'
 import { type Product, CATEGORY_LABELS, formatPrice, getEffectivePrice } from '@/types'
@@ -11,6 +12,8 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (!isSupabaseConfigured) return { title: 'Sản phẩm không tồn tại' }
+
   const { slug } = await params
   const { data } = await supabase
     .from('products')
@@ -26,6 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProductDetailPage({ params }: Props) {
+  if (!isSupabaseConfigured) notFound()
+
   const { slug } = await params
 
   const { data: product, error } = await supabase
@@ -48,9 +53,9 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav style={{ fontSize: '13px', color: 'rgba(44,24,16,0.45)', marginBottom: '32px' }}>
-        <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Trang chủ</a>
+        <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Trang chủ</Link>
         {' / '}
-        <a href="/shop" style={{ color: 'inherit', textDecoration: 'none' }}>Shop</a>
+        <Link href="/shop" style={{ color: 'inherit', textDecoration: 'none' }}>Shop</Link>
         {' / '}
         <span style={{ color: '#2C1810' }}>{p.name}</span>
       </nav>

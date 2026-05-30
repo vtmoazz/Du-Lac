@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useCartStore } from '@/store/cartStore'
-import { type Product, getEffectivePrice } from '@/types'
+import { type Product } from '@/types'
 
 interface AddToCartButtonProps {
   product: Product

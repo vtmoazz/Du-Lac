@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { formatPrice } from '@/types'
 import { useCartStore } from '@/store/cartStore'
-import type { Product } from '@/types'
 
 const previewProducts = [
   { name: 'Bộ Kit Rối Nước Tự Làm', category: 'Bộ Kit DIY', price: 280000, emoji: '🎭', badgeColor: '#2E7D52' },

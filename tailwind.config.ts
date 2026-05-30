@@ -11,20 +11,22 @@ const config: Config = {
       colors: {
         dulac: {
           // ── Palette v2 · Đông Hồ Rực Rỡ ──────────────────
-          cream:     '#FBF5E6',   // Giấy Dó Kem   — background chính
-          parchment: '#FFF3C4',   // Giấy Vàng     — card, surface nhẹ
-          red:       '#C8392B',   // Đỏ Son        — CTA, accent chính
-          amber:     '#E8A020',   // Vàng Nghệ     — heading, highlight, border
-          jade:      '#2E7D52',   // Xanh Lá Ngọc — badge, tag
-          brown:     '#5C3317',   // Nâu Gỗ Sẫm   — border, frame, heading
-          ink:       '#2C1810',   // Đen Mực       — body text
+          cream:     '#FFF8E1',
+          parchment: '#F2E6BD',
+          red:       '#B71C1C',
+          amber:     '#D9A441',
+          jade:      '#2E7D32',
+          cyan:      '#7FE7C4',
+          brown:     '#5D4037',
+          ink:       '#1E1A17',
+          deep:      '#10251A',
           // ── Alias giữ tương thích code cũ ─────────────────
-          dark:      '#FBF5E6',
-          wood:      '#FFF3C4',
-          terra:     '#C8392B',
-          gold:      '#E8A020',
-          moss:      '#2E7D52',
-          paper:     '#2C1810',
+          dark:      '#10251A',
+          wood:      '#F2E6BD',
+          terra:     '#B71C1C',
+          gold:      '#D9A441',
+          moss:      '#2E7D32',
+          paper:     '#1E1A17',
         },
       },
       fontFamily: {

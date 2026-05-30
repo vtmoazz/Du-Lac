@@ -1,6 +1,5 @@
 import Button from '@/components/ui/Button'
 import { Play } from 'lucide-react'
-import Image from 'next/image'
 
 export default function HeroSection() {
   return (
@@ -41,7 +40,7 @@ export default function HeroSection() {
           Hành trình dân gian, trải nghiệm chất trẻ
         </p>
         <p className="text-dulac-ink/65 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10">
-          Nền tảng game tương tác biến hành trình khám phá văn hóa Việt Nam thành chuyện "phượt" mãn nhãn dành riêng cho thế hệ trẻ.
+          Nền tảng game tương tác biến hành trình khám phá văn hóa Việt Nam thành chuyện &ldquo;phượt&rdquo; mãn nhãn dành riêng cho thế hệ trẻ.
         </p>
 
         {/* CTAs */}
