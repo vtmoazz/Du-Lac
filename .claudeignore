@@ -1,0 +1,49 @@
+# Claude Code sẽ bỏ qua các file/thư mục này
+# Giúp tiết kiệm token, tránh đọc file không cần thiết
+
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+build/
+
+# Git
+.git/
+.gitignore
+
+# Lock files (không cần đọc)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ảnh và media (binary, không đọc được)
+public/images/
+public/videos/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.webp
+*.ico
+
+# Environment (bảo mật)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

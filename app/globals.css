@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Du Lạc Color Palette v2 · Đông Hồ ── */
+  --color-dulac-cream:     #FBF5E6;
+  --color-dulac-parchment: #FFF3C4;
+  --color-dulac-red:       #C8392B;
+  --color-dulac-amber:     #E8A020;
+  --color-dulac-jade:      #2E7D52;
+  --color-dulac-brown:     #5C3317;
+  --color-dulac-ink:       #2C1810;
+  /* Alias tương thích */
+  --color-dulac-dark:      #FBF5E6;
+  --color-dulac-wood:      #FFF3C4;
+  --color-dulac-terra:     #C8392B;
+  --color-dulac-gold:      #E8A020;
+  --color-dulac-moss:      #2E7D52;
+  --color-dulac-paper:     #2C1810;
+
+  /* ── Fonts ── */
+  --font-serif: "Noto Serif Display", Georgia, serif;
+  --font-sans:  "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  --font-mono:  "JetBrains Mono", monospace;
+
+  /* ── Custom shadows ── */
+  --shadow-red:        0 4px 24px rgba(200,57,43,0.25);
+  --shadow-amber:      0 4px 24px rgba(232,160,32,0.2);
+  --shadow-card:       0 2px 16px rgba(44,24,16,0.08);
+  --shadow-card-hover: 0 8px 32px rgba(44,24,16,0.14);
+
+  /* ── Keyframes ── */
+  --animate-fade-in-up:      fade-in-up 0.6s ease forwards;
+  --animate-slide-in-right:  slide-in-right 0.3s cubic-bezier(0.4,0,0.2,1);
+  --animate-slide-out-right: slide-out-right 0.3s cubic-bezier(0.4,0,0.2,1);
+  --animate-pulse-amber:     pulse-amber 2s ease infinite;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes slide-out-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+@keyframes pulse-amber {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,160,32,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(232,160,32,0.15); }
+}
+
+:root {
+  --background: #FBF5E6;
+  --foreground: #2C1810;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FBF5E6;
+    --foreground: #2C1810;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FFF3C4; }
+::-webkit-scrollbar-thumb { background: #5C3317; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C8392B; }
+
+::selection {
+  background: rgba(200, 57, 43, 0.2);
+  color: #2C1810;
+}
+
+html { scroll-behavior: smooth; }
