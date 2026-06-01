@@ -5,9 +5,9 @@ import { siteConfig } from '@/content/home'
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[92svh] items-center overflow-hidden pb-16 pt-24 md:pb-20 md:pt-28">
+    <section className="relative  flex min-h-[92svh] items-center overflow-hidden pb-16 pt-24 md:pb-20 md:pt-28">
       <BackgroundLayer variant="villageMorning" priority />
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center px-4 md:grid-cols-[minmax(0,0.92fr)_minmax(320px,0.58fr)] md:px-8">
+      <div className="relative w-full z-10 mx-auto grid max-w-7xl items-center px-4 md:grid-cols-[minmax(0,0.92fr)_minmax(320px,0.58fr)] md:px-8">
         <div className="max-w-3xl text-dulac-cream">
           <div className="section-reveal inline-flex items-center gap-2 rounded-full border border-dulac-cyan/30 bg-dulac-deep/45 px-4 py-2 text-sm font-semibold text-dulac-cyan backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-dulac-cyan shadow-[0_0_16px_rgba(127,231,196,0.95)]" />

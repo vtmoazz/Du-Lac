@@ -9,12 +9,12 @@ export default function MediaSection() {
 
   return (
     <Section id="media" variant="darkGallery" className="text-dulac-cream">
-      <div className="mx-auto max-w-3xl text-center">
-        <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-cyan">Media Preview</p>
+      <div className="text-left">
+        <p className="section-divider justify-center text-sm font-bold uppercase tracking-[0.22em] text-dulac-cyan">Teaser Preview</p>
         <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-5xl">
           Nhìn thấy ký ức trước khi nó biến mất.
         </h2>
-        <p className="mt-5 text-base leading-8 text-dulac-cream/65 md:text-lg">
+        <p className="mx-auto mt-5 text-center text-base leading-8 text-dulac-cream/65 md:text-lg">
           Các khung hình dưới đây là placeholder có chủ đích cho MVP, giữ đúng mood concept trong khi trailer và screenshot thật đang được phát triển.
         </p>
       </div>

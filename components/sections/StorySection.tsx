@@ -660,14 +660,14 @@ export default function StorySection() {
   return (
     <Section id='story' variant='paper'>
       {/* Header */}
-      <div className='text-center'>
+      <div className='text-left'>
         <p className='section-divider justify-center text-sm font-bold uppercase tracking-[0.22em] text-dulac-red'>
           Cốt truyện
         </p>
         <h2 className='mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl'>
           Khi ký ức không biến mất, nó chỉ ngủ quên.
         </h2>
-        <p className='mx-auto mt-4 max-w-xl text-base leading-8 text-dulac-ink/58'>
+        <p className='mx-auto mt-4 text-center text-base leading-8 text-dulac-ink/58'>
           Hành trình của Tính và Lan Anh — qua 5 chương ký ức chưa bao giờ thực
           sự mất đi.
         </p>

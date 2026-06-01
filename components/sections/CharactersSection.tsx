@@ -8,12 +8,12 @@ export default function CharactersSection() {
 
   return (
     <Section id="characters" variant="paper">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-red">Nhân vật</p>
+      <div className="text-left">
+        <p className="section-divider justify-center text-sm font-bold uppercase tracking-[0.22em] text-dulac-red">Nhân vật</p>
         <h2 className="mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl">
           Hai người đi cùng nhau, nhưng chỉ một người còn nhớ đường.
         </h2>
-        <p className="mt-4 text-base leading-8 text-dulac-ink/62">
+        <p className="mx-auto  text-center mt-4 text-base leading-8 text-dulac-ink/62">
           Mỗi nhân vật trong Du Lạc là một mảnh ký ức — họ không chỉ kể chuyện, họ giữ chìa khóa.
         </p>
       </div>
