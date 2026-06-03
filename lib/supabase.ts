@@ -10,14 +10,14 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error(
-    'Thiếu NEXT_PUBLIC_SUPABASE_URL hoặc NEXT_PUBLIC_SUPABASE_ANON_KEY trong .env.local'
-  )
-}
+export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey)
 
-// Singleton client — dùng chung toàn project
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Singleton client — dùng chung toàn project.
+// Dùng fallback chỉ để Next build không fail khi MVP landing chưa cấu hình shop env.
+export const supabase = createClient(
+  supabaseUrl ?? 'https://example.supabase.co',
+  supabaseAnonKey ?? 'anon-key'
+)
 
 // ----------------------------------------
 // Helper: lấy user hiện tại
@@ -25,6 +25,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 // getUser() gọi server để verify token, bảo mật hơn
 // ----------------------------------------
 export async function getCurrentUser() {
+  if (!isSupabaseConfigured) return null
   const { data: { user }, error } = await supabase.auth.getUser()
   if (error) return null
   return user

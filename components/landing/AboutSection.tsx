@@ -28,7 +28,7 @@ export default function AboutSection() {
 
               {/* Nội dung */}
               <h3 className="font-serif text-xl font-bold text-dulac-red mb-3">
-                Sứ mệnh "Sống lại" giá trị cũ
+                Sứ mệnh &ldquo;Sống lại&rdquo; giá trị cũ
               </h3>
               <p className="text-dulac-ink/70 text-sm leading-relaxed mb-4">
                 Chúng tôi là một nhóm sinh viên mang trong mình tình yêu cháy bỏng với cội nguồn. Nhận thấy người trẻ ngày nay dần xa rời những giá trị truyền thống vì sách vở quá khó khan, Du Lạc ra đời với định vị là một <strong className="text-dulac-brown">Gaming Hub Văn Hóa</strong>.
@@ -39,7 +39,7 @@ export default function AboutSection() {
 
               {/* Quote */}
               <blockquote className="mt-5 pl-4 border-l-4 border-dulac-amber italic text-dulac-ink/55 text-sm">
-                "Chuyện cũ tích xưa, đón đưa người trẻ."
+                &ldquo;Chuyện cũ tích xưa, đón đưa người trẻ.&rdquo;
                 <footer className="mt-2 not-italic font-medium text-dulac-brown/70 text-xs">— Du Lạc</footer>
               </blockquote>
             </div>

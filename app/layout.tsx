@@ -17,12 +17,37 @@ const beVietnamPro = Be_Vietnam_Pro({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: {
-    default: 'Du Lac - Choi De Cham, Cham De Chua Lanh',
-    template: '%s | Du Lac',
+    default: 'Du Lạc — Vietnamese Folklore Narrative Adventure Game',
+    template: '%s | Du Lạc',
   },
-  description: 'Game tuong tac kham pha van hoa Viet Nam.',
-  keywords: ['Du Lac', 'game van hoa', 'dan gian Viet Nam'],
+  description:
+    'Du Lạc là game phiêu lưu cốt truyện lấy cảm hứng từ văn hóa dân gian Việt Nam, kể về hành trình Lan Anh đưa Tính đi qua làng quê, trò chơi tuổi thơ và truyền thuyết cũ để đánh thức ký ức đã ngủ quên.',
+  keywords: [
+    'game dân gian Việt Nam',
+    'Vietnamese folklore game',
+    'narrative adventure Vietnam',
+    'Vietnamese indie game',
+    'Ô Ăn Quan game',
+    'rối nước game',
+    'folklore adventure game',
+    'Du Lạc game',
+  ],
+  openGraph: {
+    title: 'Du Lạc — Đi qua văn hóa. Chạm lại ký ức.',
+    description: 'Một game phiêu lưu cốt truyện lấy cảm hứng từ văn hóa dân gian Việt Nam.',
+    type: 'website',
+    locale: 'vi_VN',
+    images: [
+      {
+        url: '/images/backgrounds/hero-village-gate.png',
+        width: 1672,
+        height: 941,
+        alt: 'Lan Anh dắt Tính trước cổng làng, xa xa có đom đóm và ánh sớm.',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

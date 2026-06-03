@@ -39,7 +39,33 @@
 
 ---
 
-## GIAI DOAN 2 - Auth + Checkout + PayOS
+## GIAI DOAN 1.5 - UI Optimization + Tich hop Shop vao Landing (lam truoc G2)
+
+> Uu tien: sua bug critical truoc, sau do visual polish.
+
+### Bug Critical (anh huong usability ngay bay gio)
+- [ ] Them nut cart icon vao Navbar.tsx: goi openDrawer() tu cartStore, hien badge so luong item
+- [ ] Chuyen Navbar + Footer tu app/page.tsx vao app/layout.tsx de shop pages co header/footer
+- [ ] Them { href: '/shop', label: 'Cua hang' } vao navigationItems trong content/home.ts
+- [ ] Them pt-16 (padding-top: 64px) cho shop page hero de khong bi navbar che
+
+### Visual Consistency - Shop khop voi Landing
+- [ ] Viet lai shop hero (app/shop/page.tsx) dung Section variant="paper" + typography dulac-*
+- [ ] Port ProductCard inline styles sang dulac-* Tailwind classes
+- [ ] Port ProductGrid inline styles sang dulac-* Tailwind classes
+- [ ] Port shop/[slug] page inline styles sang dulac-* Tailwind classes
+
+### Tich hop Shop vao Landing Page
+- [ ] Them ShopPreviewSection vao app/page.tsx (component da co tai components/landing/ShopPreviewSection.tsx, chua dung)
+- [ ] Kiem tra lai ShopPreviewSection co dung dulac-* tokens va khop voi landing mood khong
+
+### UX Polish
+- [ ] Them quantity selector vao AddToCartButton (tang/giam so luong truoc khi them vao gio)
+- [ ] Product detail: click thumbnail doi anh chinh (hien tai thumbnail chi hien thi, khong interactive)
+
+---
+
+## GIAI DOAN 2 - Auth + Checkout + SePay
 
 ### Auth
 - [ ] app/auth/login/page.tsx - form email + password, redirect sau login
@@ -49,23 +75,23 @@
 
 ### Checkout
 - [ ] components/shop/OrderSummary.tsx - tom tat don hang
-- [ ] components/shop/CheckoutForm.tsx - form dia chi + phuong thuc thanh toan (COD / PayOS)
+- [ ] components/shop/CheckoutForm.tsx - form dia chi + phuong thuc thanh toan (COD / Chuyen khoan SePay)
 - [ ] app/checkout/page.tsx - layout 2 cot
-- [ ] app/checkout/success/page.tsx - trang cam on (xu ly ca COD va PayOS)
-- [ ] app/checkout/[cancelled route] - xu ly khi huy PayOS
+- [ ] app/checkout/success/page.tsx - trang cam on (xu ly ca COD va SePay)
+- [ ] app/checkout/cancel/page.tsx - xu ly khi huy thanh toan
 
-### PayOS QR Payment - KHONG CO SANDBOX, TEST VOI 1.000D THAT
-- [ ] Dang ky tai my.payos.vn, xac minh, lay 3 keys (CLIENT_ID, API_KEY, CHECKSUM_KEY)
-- [ ] npm install @payos/node
-- [ ] Them env: PAYOS_CLIENT_ID, PAYOS_API_KEY, PAYOS_CHECKSUM_KEY, NEXT_PUBLIC_BASE_URL
-- [ ] lib/payos.ts - khoi tao PayOS client
-- [ ] app/api/orders/route.ts - tao don hang, neu PayOS thi goi API lay checkout_url
-- [ ] app/api/payos/webhook/route.ts - nhan ket qua PayOS, verify signature, update order status
-- [ ] app/api/payos/return/route.ts - redirect user sau khi thanh toan
-- [ ] Them webhook URL va return URL vao my.payos.vn
-- [ ] Them 4 env vars vao Vercel Dashboard
-- [ ] Chay SQL them cot payos_order_code, payos_payment_link_id, payos_checkout_url vao orders
-- [ ] Verify end-to-end: chon hang -> gio -> checkout PayOS -> quet QR -> order confirmed
+### SePay QR Payment - CO SANDBOX, DANG KY BANG CCCD
+- [ ] Dang ky tai sepay.vn, xac minh CCCD, lay API key
+- [ ] npm install axios (hoac dung fetch thuan) - SePay khong co official SDK
+- [ ] Them env: SEPAY_API_KEY, SEPAY_ACCOUNT_NUMBER, SEPAY_BANK_CODE, NEXT_PUBLIC_BASE_URL
+- [ ] lib/sepay.ts - ham tao QR code URL va verify webhook signature
+- [ ] app/api/orders/route.ts - tao don hang, sinh ma don (orderCode), tra ve QR URL SePay
+- [ ] app/api/sepay/webhook/route.ts - nhan callback tu SePay, verify signature, update order status
+- [ ] Them webhook URL vao dashboard SePay
+- [ ] Them env vars vao Vercel Dashboard
+- [ ] Chay SQL them cot sepay_transaction_id, sepay_order_code vao orders
+- [ ] Test sandbox: tao don -> hien QR -> gia lap webhook -> order confirmed
+- [ ] Verify end-to-end that: chon hang -> gio -> checkout -> quet QR ngan hang -> order confirmed
 
 ---
 
@@ -107,7 +133,8 @@
 | Giai doan | Noi dung | Trang thai |
 |---|---|---|
 | G1 Deploy MVP | Landing + Shop + Cart + Vercel | Can Supabase + deploy |
-| G2 Auth + Checkout + PayOS | Login / Checkout / QR payment | Chua bat dau |
+| G1.5 UI Optimization | Cart trigger, Navbar/Footer global, Shop visual | Chua bat dau |
+| G2 Auth + Checkout + SePay | Login / Checkout / QR payment | Chua bat dau |
 | G3 Noi dung | Lore / About / Puzzle | Chua bat dau |
 | G4 Polish | Responsive / Anh that / SEO | Chua bat dau |
 
@@ -126,10 +153,11 @@ CartItemRow, CartDrawer, layout mount, types voi PayOS support.
 - FeaturesSection/GallerySection: 100% inline styles
 - Shop routing: dung [slug], fetch .eq('slug', slug)
 - File encoding: Write/Edit tool co the truncate file -> dung bash cat ENDOFFILE
-- PayOS: khong co sandbox, test voi 1.000d that
-- PayOS description: toi da 25 ky tu
-- PayOS orderCode: so nguyen duong, dung Date.now()
+- SePay: co sandbox, dang ky CCCD ca nhan duoc
+- SePay: khong co official SDK, dung fetch/axios thuan toi
+- SePay webhook: verify bang HMAC-SHA256 voi API key
+- SePay orderCode: chuoi tu sinh, gan vao noi dung chuyen khoan de auto-detect
 
 ---
 
-Cap nhat: 2026-05-30
+Cap nhat: 2026-06-01

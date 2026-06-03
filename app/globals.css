@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Du Lạc Color Palette v2 · Đông Hồ ── */
-  --color-dulac-cream:     #FBF5E6;
-  --color-dulac-parchment: #FFF3C4;
-  --color-dulac-red:       #C8392B;
-  --color-dulac-amber:     #E8A020;
-  --color-dulac-jade:      #2E7D52;
-  --color-dulac-brown:     #5C3317;
-  --color-dulac-ink:       #2C1810;
+  /* ── Du Lạc Color Palette · Cyber folklore ── */
+  --color-dulac-cream:     #FFF8E1;
+  --color-dulac-parchment: #F2E6BD;
+  --color-dulac-red:       #B71C1C;
+  --color-dulac-amber:     #D9A441;
+  --color-dulac-jade:      #2E7D32;
+  --color-dulac-cyan:      #7FE7C4;
+  --color-dulac-brown:     #5D4037;
+  --color-dulac-ink:       #1E1A17;
+  --color-dulac-deep:      #10251A;
   /* Alias tương thích */
-  --color-dulac-dark:      #FBF5E6;
-  --color-dulac-wood:      #FFF3C4;
-  --color-dulac-terra:     #C8392B;
-  --color-dulac-gold:      #E8A020;
-  --color-dulac-moss:      #2E7D52;
-  --color-dulac-paper:     #2C1810;
+  --color-dulac-dark:      #10251A;
+  --color-dulac-wood:      #F2E6BD;
+  --color-dulac-terra:     #B71C1C;
+  --color-dulac-gold:      #D9A441;
+  --color-dulac-moss:      #2E7D32;
+  --color-dulac-paper:     #1E1A17;
 
   /* ── Fonts ── */
   --font-serif: "Noto Serif Display", Georgia, serif;
@@ -23,16 +25,17 @@
   --font-mono:  "JetBrains Mono", monospace;
 
   /* ── Custom shadows ── */
-  --shadow-red:        0 4px 24px rgba(200,57,43,0.25);
-  --shadow-amber:      0 4px 24px rgba(232,160,32,0.2);
-  --shadow-card:       0 2px 16px rgba(44,24,16,0.08);
-  --shadow-card-hover: 0 8px 32px rgba(44,24,16,0.14);
+  --shadow-red:        0 10px 28px rgba(183,28,28,0.28);
+  --shadow-amber:      0 4px 24px rgba(217,164,65,0.2);
+  --shadow-card:       0 2px 18px rgba(30,26,23,0.09);
+  --shadow-card-hover: 0 14px 34px rgba(30,26,23,0.15);
 
   /* ── Keyframes ── */
   --animate-fade-in-up:      fade-in-up 0.6s ease forwards;
   --animate-slide-in-right:  slide-in-right 0.3s cubic-bezier(0.4,0,0.2,1);
   --animate-slide-out-right: slide-out-right 0.3s cubic-bezier(0.4,0,0.2,1);
   --animate-pulse-amber:     pulse-amber 2s ease infinite;
+  --animate-float-firefly:   float-firefly 6s ease-in-out infinite;
 }
 
 @keyframes fade-in-up {
@@ -48,35 +51,134 @@
   to   { transform: translateX(100%); }
 }
 @keyframes pulse-amber {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232,160,32,0); }
-  50%       { box-shadow: 0 0 0 8px rgba(232,160,32,0.15); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217,164,65,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(217,164,65,0.15); }
+}
+@keyframes float-firefly {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.85); opacity: 0.36; }
+  45%      { transform: translate3d(14px, -24px, 0) scale(1.15); opacity: 1; }
+  70%      { transform: translate3d(-10px, -10px, 0) scale(0.95); opacity: 0.72; }
+}
+@keyframes slow-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes quote-glow {
+  0%, 100% { text-shadow: 0 0 0 rgba(127,231,196,0); }
+  50%      { text-shadow: 0 0 22px rgba(127,231,196,0.5); }
 }
 
 :root {
-  --background: #FBF5E6;
-  --foreground: #2C1810;
+  --background: #FFF8E1;
+  --foreground: #1E1A17;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FBF5E6;
-    --foreground: #2C1810;
+    --background: #FFF8E1;
+    --foreground: #1E1A17;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #FFF3C4; }
-::-webkit-scrollbar-thumb { background: #5C3317; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #C8392B; }
+::-webkit-scrollbar-track { background: #FFF8E1; }
+::-webkit-scrollbar-thumb { background: #5D4037; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B71C1C; }
 
 ::selection {
-  background: rgba(200, 57, 43, 0.2);
-  color: #2C1810;
+  background: rgba(183, 28, 28, 0.2);
+  color: #1E1A17;
 }
 
 html { scroll-behavior: smooth; }
+
+.noise-layer {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.paper-texture::before,
+.folklore-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.paper-texture::before {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(183,28,28,0.08), transparent 18%),
+    radial-gradient(circle at 82% 30%, rgba(46,125,50,0.08), transparent 16%),
+    linear-gradient(90deg, rgba(93,64,55,0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(93,64,55,0.05) 1px, transparent 1px);
+  background-size: auto, auto, 76px 76px, 76px 76px;
+}
+
+.folklore-pattern::before {
+  background-image:
+    radial-gradient(circle at center, rgba(93,64,55,0.12) 0 2px, transparent 3px),
+    repeating-conic-gradient(from 0deg, rgba(183,28,28,0.08) 0deg 8deg, transparent 8deg 18deg);
+  background-size: 34px 34px, 168px 168px;
+}
+
+.firefly {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #7FE7C4;
+  box-shadow: 0 0 16px #7FE7C4, 0 0 32px rgba(127,231,196,0.55);
+  animation: float-firefly 6s ease-in-out infinite;
+}
+
+.memory-dot {
+  animation: pulse-amber 2.4s ease-in-out infinite;
+}
+
+.section-reveal {
+  animation: slow-reveal 0.7s ease both;
+}
+
+.section-reveal:nth-child(2) { animation-delay: 0.06s; }
+.section-reveal:nth-child(3) { animation-delay: 0.12s; }
+.section-reveal:nth-child(4) { animation-delay: 0.18s; }
+.section-reveal:nth-child(5) { animation-delay: 0.24s; }
+
+.episode-quote {
+  animation: quote-glow 4.5s ease-in-out infinite;
+}
+
+/* Section label divider — amber gradient lines flanking the label */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217,164,65,0.5), transparent);
+}
+/* Keep left side flush on headings — only right line for non-centered labels */
+.section-divider::before {
+  max-width: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

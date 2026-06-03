@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { supabase } from '@/lib/supabase'
+import { isSupabaseConfigured, supabase } from '@/lib/supabase'
 import ProductGrid from '@/components/shop/ProductGrid'
 import type { Product } from '@/types'
 
@@ -12,14 +12,16 @@ export default async function ShopPage() {
   let products: Product[] = []
 
   try {
-    const { data, error } = await supabase
-      .from('products')
-      .select('*')
-      .eq('is_active', true)
-      .order('created_at', { ascending: false })
+    if (isSupabaseConfigured) {
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .eq('is_active', true)
+        .order('created_at', { ascending: false })
 
-    if (error) throw error
-    products = data ?? []
+      if (error) throw error
+      products = data ?? []
+    }
   } catch (err) {
     console.error('Lỗi fetch products:', err)
   }
