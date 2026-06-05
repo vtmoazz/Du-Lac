@@ -29,9 +29,8 @@ export default function FolkloreCard({ title, description, icon, tag }: Folklore
         </span>
       )}
 
-      <p className="absolute bottom-4 left-0 right-0 px-5 text-xs font-semibold uppercase tracking-[0.16em] text-dulac-red/0 transition duration-200 group-hover:text-dulac-red/80">
-        Xem trong Sổ Tay Du Lạc →
-      </p>
+    
+
     </article>
   )
 }

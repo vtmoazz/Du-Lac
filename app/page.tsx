@@ -21,8 +21,8 @@ export default function HomePage() {
         <GameplaySection />
         <EpisodeSection />
         <MediaSection />
-        <CharactersSection />
         <FolkloreSection />
+        <CharactersSection />
         <CommunitySection />
       </main>
       <Footer />

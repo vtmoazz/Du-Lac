@@ -41,11 +41,7 @@ export default function MediaSection() {
             </div>
           </div>
         </article>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {items.map((item, index) => (
-            <MediaCard key={item} title={item} index={index + 1} />
-          ))}
-        </div>
+        
       </div>
     </Section>
   )
