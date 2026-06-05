@@ -13,9 +13,9 @@ export const siteConfig = {
 export const navigationItems = [
   { href: '#story', label: 'Cốt truyện' },
   { href: '#gameplay', label: 'Gameplay' },
+  { href: '#media', label: 'Episode Showcase' },
   { href: '#world', label: 'Thế giới' },
   { href: '#characters', label: 'Nhân vật' },
-  { href: '#media', label: 'Media' },
   { href: '#community', label: 'Cộng đồng' },
 ]
 
