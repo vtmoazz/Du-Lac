@@ -18,10 +18,10 @@ export default function FolkloreSection() {
       <div className="grid gap-10 lg:grid-cols-[0.52fr_1fr] lg:items-start">
         <div className="lg:sticky lg:top-24">
           <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-red">Folklore Codex</p>
-          <h2 className="mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl">
+          <h2 className="dulac-title reveal mt-4 font-serif text-4xl text-dulac-amber md:text-5xl">
             Một Việt Nam vừa quen, vừa linh thiêng.
           </h2>
-          <p className="mt-5 text-base leading-8 text-dulac-ink/70 md:text-lg">
+          <p className="dulac-paragraph reveal mt-5 text-dulac-ink/70" data-delay="1">
             Mỗi biểu tượng văn hóa trong Du Lạc đều có câu chuyện, âm thanh, ký ức và vai trò gameplay riêng.
           </p>
         </div>

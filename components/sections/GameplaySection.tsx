@@ -31,21 +31,26 @@ export default function GameplaySection() {
         {/* Left: heading + cards */}
         <div>
           <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-red">Gameplay Pillars</p>
-          <h2 className="mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl">
+          <h2 className="dulac-title reveal mt-4 font-serif text-4xl text-dulac-amber md:text-5xl">
             Khám phá bằng bước chân. Ghi nhớ bằng trái tim.
           </h2>
-          <p className="mt-5 text-base leading-8 text-dulac-ink/70 md:text-lg">
+          <p className="dulac-paragraph reveal mt-5 text-dulac-ink/70" data-delay="1">
             Trong Du Lạc, mỗi phong tục, trò chơi và địa điểm đều có thể trở thành một mảnh khóa ký ức.
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {gameplayPillars.map((pillar) => (
-              <FeatureCard
+            {gameplayPillars.map((pillar, i) => (
+              <div
                 key={pillar.title}
-                title={pillar.title}
-                description={pillar.description}
-                icon={icons[pillar.icon as keyof typeof icons]}
-              />
+                className="reveal"
+                style={{ transitionDelay: `${0.1 + i * 0.12}s` }}
+              >
+                <FeatureCard
+                  title={pillar.title}
+                  description={pillar.description}
+                  icon={icons[pillar.icon as keyof typeof icons]}
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -96,8 +101,12 @@ export default function GameplaySection() {
                   const cy = parseFloat(pt.y) / 100 * 208
                   return (
                     <g key={pt.label}>
-                      {/* Outer ring */}
-                      <circle cx={cx} cy={cy} r="13" fill={pt.active ? 'rgba(127,231,196,0.15)' : 'rgba(93,64,55,0.08)'} />
+                      {/* Outer ring — pulse on active */}
+                      <circle
+                        cx={cx} cy={cy} r="13"
+                        fill={pt.active ? 'rgba(127,231,196,0.15)' : 'rgba(93,64,55,0.08)'}
+                        className={pt.active ? 'memory-dot-svg' : ''}
+                      />
                       {/* Inner dot */}
                       <circle cx={cx} cy={cy} r="5.5"
                         fill={pt.active ? '#7FE7C4' : '#D9A441'}

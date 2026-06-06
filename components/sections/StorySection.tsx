@@ -664,10 +664,10 @@ export default function StorySection() {
         <p className='section-divider justify-center text-sm font-bold uppercase tracking-[0.22em] text-dulac-red'>
           Cốt truyện
         </p>
-        <h2 className='mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl'>
+        <h2 className='dulac-title reveal mt-4 font-serif text-4xl text-dulac-amber md:text-5xl'>
           Khi ký ức không biến mất, nó chỉ ngủ quên.
         </h2>
-        <p className='mx-auto mt-4 text-center text-base leading-8 text-dulac-ink/58'>
+        <p className='dulac-paragraph reveal mx-auto mt-4 text-center text-dulac-ink/58' data-delay="1">
           Hành trình của Tính và Lan Anh — qua 5 chương ký ức chưa bao giờ thực
           sự mất đi.
         </p>

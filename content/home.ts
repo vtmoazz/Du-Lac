@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     'Một game phiêu lưu cốt truyện lấy cảm hứng từ văn hóa dân gian Việt Nam, nơi Lan Anh đưa Tính trở lại những làng quê, trò chơi tuổi thơ và truyền thuyết cũ để đánh thức phần ký ức đã ngủ quên.',
   cta: {
-    primary: 'Wishlist Now',
+    primary: 'Trải nghiệm ngay',
     secondary: 'Xem Trailer',
     tertiary: 'Khám phá câu chuyện',
   },

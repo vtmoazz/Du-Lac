@@ -13,13 +13,13 @@ export default function HeroSection() {
             <span className="h-2 w-2 rounded-full bg-dulac-cyan shadow-[0_0_16px_rgba(127,231,196,0.95)]" />
             Narrative adventure · Vietnamese folklore
           </div>
-          <h1 className="section-reveal mt-6 font-serif text-5xl font-black leading-[0.96] text-dulac-cream md:text-7xl lg:text-8xl">
+          <h1 className="dulac-title title-gradient section-reveal mt-6 font-serif text-5xl font-black leading-[0.96] md:text-7xl lg:text-8xl">
             {siteConfig.name}
           </h1>
-          <p className="section-reveal mt-5 font-serif text-2xl font-semibold leading-tight text-dulac-cyan md:text-4xl">
+          <p className="dulac-subtitle section-reveal mt-5 font-serif text-2xl text-dulac-cream/90 md:text-4xl">
             {siteConfig.tagline}
           </p>
-          <p className="section-reveal mt-6 max-w-2xl text-base leading-8 text-dulac-cream/78 md:text-lg md:leading-9">
+          <p className="dulac-paragraph section-reveal mt-6 max-w-2xl text-dulac-cream/78">
             {siteConfig.description}
           </p>
           <div className="section-reveal mt-9 flex flex-col gap-3 sm:flex-row">

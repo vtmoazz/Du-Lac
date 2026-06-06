@@ -66,10 +66,10 @@ export default function ShopPreviewSection() {
             <span style={{ color: '#E8A020', fontSize: '1.2rem' }}>✿</span>
             <div style={{ height: '1px', width: '48px', backgroundColor: 'rgba(232,160,32,0.5)' }} />
           </div>
-          <h2 style={{ fontFamily: 'Noto Serif Display, Georgia, serif', fontWeight: 700, color: '#5C3317', fontSize: '2rem', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#D9A441', fontSize: '2rem', marginBottom: '0.75rem' }}>
             Cửa Hàng Du Lạc
           </h2>
-          <p style={{ color: 'rgba(44,24,16,0.65)', fontSize: '1rem', maxWidth: '36rem', margin: '0 auto' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', color: 'rgba(44,24,16,0.65)', fontSize: '0.875rem', lineHeight: '1.75', maxWidth: '36rem', margin: '0 auto' }}>
             Mang văn hóa dân gian về tay bạn — từ bộ kit DIY đến board game truyền thống.
           </p>
         </div>

@@ -20,16 +20,16 @@ export default function CommunitySection() {
 
       <div className="relative z-10 max-w-3xl">
         <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-cyan">Community</p>
-        <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-6xl">
+        <h2 className="dulac-title mt-4 font-serif text-4xl text-dulac-amber md:text-6xl">
           Cùng lưu giữ những điều đang dần bị quên.
         </h2>
-        <p className="mt-6 text-base leading-8 text-dulac-cream/76 md:text-lg md:leading-9">
+        <p className="dulac-paragraph mt-6 text-dulac-cream/76">
           Du Lạc đang được phát triển như một hành trình dài qua ký ức, văn hóa và những vùng đất Việt Nam. Theo dõi quá trình phát triển, tham gia cộng đồng và chia sẻ những ký ức tuổi thơ của bạn.
         </p>
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <Button href="#" variant="primary" size="lg">
             <Sparkles size={20} />
-            Wishlist trên Steam
+            Trải nghiệm bản demo
           </Button>
           <Button href="#" variant="secondaryDark" size="lg">
             <MessageCircle size={20} />
