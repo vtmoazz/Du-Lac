@@ -33,13 +33,13 @@ export default function HeroSection() {
         </div>
 
         {/* Title */}
-        <h1 className="dulac-title font-serif font-bold text-5xl md:text-7xl text-dulac-amber leading-tight mb-6">
+        <h1 className="dulac-title reveal font-serif font-bold text-5xl md:text-7xl text-dulac-amber leading-tight mb-6">
           Du Lạc
         </h1>
-        <p className="dulac-subtitle font-serif text-2xl md:text-3xl text-dulac-red mb-4">
+        <p className="dulac-subtitle reveal font-serif text-2xl md:text-3xl text-dulac-red mb-4" data-delay="1">
           Hành trình dân gian, trải nghiệm chất trẻ
         </p>
-        <p className="dulac-paragraph text-dulac-ink/65 max-w-xl mx-auto mb-10">
+        <p className="dulac-paragraph reveal text-dulac-ink/65 max-w-xl mx-auto mb-10" data-delay="2">
           Nền tảng game tương tác biến hành trình khám phá văn hóa Việt Nam thành chuyện &ldquo;phượt&rdquo; mãn nhãn dành riêng cho thế hệ trẻ.
         </p>
 

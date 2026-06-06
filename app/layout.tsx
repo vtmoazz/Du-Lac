@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Saira, Montserrat } from 'next/font/google'
 import './globals.css'
 import CartDrawer from '@/components/shop/CartDrawer'
+import ScrollRevealProvider from '@/components/ui/ScrollRevealProvider'
 
 // Title & Subtitle font — Saira (uppercase bold / medium-bold)
 const saira = Saira({
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col bg-dulac-cream font-sans text-dulac-ink">
         {children}
         <CartDrawer />
+        <ScrollRevealProvider />
       </body>
     </html>
   )

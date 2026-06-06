@@ -9,7 +9,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants = {
-  primary: 'bg-dulac-red text-white shadow-red hover:bg-[#9E1717] active:scale-[0.98]',
+  primary: 'bg-dulac-red text-white shadow-red btn-pulse hover:bg-[#9E1717] active:scale-[0.98]',
   secondary:
     'border border-dulac-red/35 text-dulac-brown bg-dulac-cream/70 hover:border-dulac-red hover:bg-dulac-cream active:scale-[0.98]',
   secondaryDark:

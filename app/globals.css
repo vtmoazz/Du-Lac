@@ -83,7 +83,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  overflow-x: hidden;
+  overflow-x: clip; /* clip thay hidden để fixed elements nhận touch event trên iOS Safari */
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -223,4 +223,100 @@ html { scroll-behavior: smooth; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ─────────────────────────────────────────
+   Scroll Reveal System
+   Dùng với ScrollRevealProvider (IntersectionObserver)
+   Thêm class "reveal" → tự fade-up khi vào viewport
+───────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays — dùng data-delay="1..5" hoặc inline style */
+.reveal[data-delay="1"] { transition-delay: 0.10s; }
+.reveal[data-delay="2"] { transition-delay: 0.20s; }
+.reveal[data-delay="3"] { transition-delay: 0.30s; }
+.reveal[data-delay="4"] { transition-delay: 0.40s; }
+.reveal[data-delay="5"] { transition-delay: 0.50s; }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Button Primary — nhẹ nhàng pulse đỏ
+───────────────────────────────────────── */
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 10px 28px rgba(183,28,28,0.28); }
+  50%       { box-shadow: 0 10px 28px rgba(183,28,28,0.28), 0 0 0 7px rgba(183,28,28,0.10); }
+}
+
+.btn-pulse {
+  animation: pulse-red 2.8s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────
+   Memory map dots — pulse SVG-safe
+   (box-shadow không chạy trong SVG, dùng opacity + scale thay thế)
+───────────────────────────────────────── */
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.18; transform: scale(1); }
+  50%       { opacity: 0.45; transform: scale(1.35); }
+}
+
+.memory-dot-svg {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ─────────────────────────────────────────
+   GameInfoStrip — Marquee ticker
+   Duplicate badge list để loop liền mạch,
+   animate translateX 0 → -50%
+───────────────────────────────────────── */
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+/* Dừng khi hover (desktop UX) */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Tắt animation khi user bật reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
 }

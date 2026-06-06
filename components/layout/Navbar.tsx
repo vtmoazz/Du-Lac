@@ -71,6 +71,7 @@ export default function Navbar() {
                 ? 'border-dulac-brown/20 text-dulac-ink hover:text-dulac-red'
                 : 'border-dulac-cream/20 text-dulac-cream hover:text-dulac-cyan'
             )}
+            style={{ touchAction: 'manipulation' }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Mở menu"
             aria-expanded={menuOpen}

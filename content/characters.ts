@@ -7,6 +7,7 @@ export const characters = [
     quote: 'Em không cần anh nhớ hết. Chỉ cần anh còn muốn đi cùng em.',
     featured: true,
     motif: 'Chỉ đỏ',
+    image: '/images/characters/rualang.jpg',  
   },
   {
     name: 'Tính',
@@ -16,6 +17,7 @@ export const characters = [
     quote: '...Thủ.',
     featured: true,
     motif: 'Tiếng trống',
+    image: '/images/characters/aosen.jpg',
   },
   {
     name: 'Ông Nhiêu',

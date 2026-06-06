@@ -21,11 +21,11 @@ export default function SectionTitle({
           <div className="h-px w-12 bg-dulac-amber/50" />
         </div>
       )}
-      <h2 className="dulac-title font-serif text-3xl md:text-4xl text-dulac-amber leading-tight">
+      <h2 className="dulac-title reveal font-serif text-3xl md:text-4xl text-dulac-amber leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="dulac-subtitle mt-3 font-serif text-dulac-red text-sm md:text-base max-w-2xl mx-auto">
+        <p className="dulac-subtitle reveal mt-3 font-serif text-dulac-red text-sm md:text-base max-w-2xl mx-auto" data-delay="1">
           {subtitle}
         </p>
       )}

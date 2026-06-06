@@ -39,7 +39,7 @@ export default function Footer() {
               {[
                 { href: '#media', label: 'Trailer', icon: <PlayCircle size={18} /> },
                 { href: '#community', label: 'Discord', icon: <MessageCircle size={18} /> },
-                { href: 'mailto:hello@dulac.game', label: 'Email', icon: <Mail size={18} /> },
+                { href: 'mailto:dulac.contact@gmail.com', label: 'Email', icon: <Mail size={18} /> },
               ].map((item) => (
                 <a
                   key={item.label}
@@ -53,14 +53,14 @@ export default function Footer() {
             </div>
             <p className="flex items-center gap-2 text-sm text-dulac-cream/58">
               <Heart size={16} className="text-dulac-red" />
-              Made in Vietnam
+              Contact: dulac.contact@gmail.com
             </p>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-dulac-cream/10 pt-6 md:flex-row">
           <p className="text-xs text-dulac-cream/38">© 2026 Du Lạc Project. All rights reserved.</p>
-          <p className="text-xs text-dulac-cream/38">MVP landing page · development preview</p>
+          <p className="text-xs text-dulac-cream/38">Made by Du Lạc Team</p>
         </div>
       </div>
     </footer>
