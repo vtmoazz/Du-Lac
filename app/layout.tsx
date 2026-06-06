@@ -1,15 +1,18 @@
 import type { Metadata } from 'next'
-import { Noto_Serif_Display, Be_Vietnam_Pro } from 'next/font/google'
+import { Saira, Montserrat } from 'next/font/google'
 import './globals.css'
 import CartDrawer from '@/components/shop/CartDrawer'
 
-const notoSerifDisplay = Noto_Serif_Display({
+// Title & Subtitle font — Saira (uppercase bold / medium-bold)
+const saira = Saira({
   subsets: ['latin', 'vietnamese'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const beVietnamPro = Be_Vietnam_Pro({
+// Paragraph font — Montserrat (readable, modern)
+const montserrat = Montserrat({
   subsets: ['latin', 'vietnamese'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const cls = [notoSerifDisplay.variable, beVietnamPro.variable, 'h-full', 'antialiased'].join(' ')
+  const cls = [saira.variable, montserrat.variable, 'h-full', 'antialiased'].join(' ')
   return (
     <html lang="vi" className={cls}>
       <body className="min-h-full flex flex-col bg-dulac-cream font-sans text-dulac-ink">

@@ -8,11 +8,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.7fr_0.7fr]">
           <div>
-            <p className="font-serif text-3xl font-black text-dulac-cyan">{siteConfig.name}</p>
-            <p className="mt-3 max-w-md font-serif text-xl font-semibold text-dulac-cream">
+            <p className="dulac-title font-serif text-3xl text-dulac-amber">{siteConfig.name}</p>
+            <p className="dulac-subtitle mt-3 max-w-md font-serif text-xl text-dulac-cream/90">
               {siteConfig.tagline}
             </p>
-            <p className="mt-4 max-w-md text-sm leading-7 text-dulac-cream/60">
+            <p className="dulac-paragraph mt-4 max-w-md text-dulac-cream/60">
               Game phiêu lưu cốt truyện lấy cảm hứng từ văn hóa dân gian Việt Nam, ký ức, tình thân và những trò chơi tuổi thơ.
             </p>
             <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-dulac-cream/38">

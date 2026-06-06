@@ -31,10 +31,10 @@ export default function GameplaySection() {
         {/* Left: heading + cards */}
         <div>
           <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-red">Gameplay Pillars</p>
-          <h2 className="mt-4 font-serif text-4xl font-black leading-tight text-dulac-brown md:text-5xl">
+          <h2 className="dulac-title mt-4 font-serif text-4xl text-dulac-amber md:text-5xl">
             Khám phá bằng bước chân. Ghi nhớ bằng trái tim.
           </h2>
-          <p className="mt-5 text-base leading-8 text-dulac-ink/70 md:text-lg">
+          <p className="dulac-paragraph mt-5 text-dulac-ink/70">
             Trong Du Lạc, mỗi phong tục, trò chơi và địa điểm đều có thể trở thành một mảnh khóa ký ức.
           </p>
 

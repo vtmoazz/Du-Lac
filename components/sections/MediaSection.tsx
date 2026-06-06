@@ -11,10 +11,10 @@ export default function MediaSection() {
     <Section id="media" variant="darkGallery" className="text-dulac-cream">
       <div className="text-left">
         <p className="section-divider justify-center text-sm font-bold uppercase tracking-[0.22em] text-dulac-cyan">Teaser Preview</p>
-        <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-5xl">
+        <h2 className="dulac-title mt-4 font-serif text-4xl text-dulac-amber md:text-5xl">
           Nhìn thấy ký ức trước khi nó biến mất.
         </h2>
-        <p className="mx-auto mt-5 text-center text-base leading-8 text-dulac-cream/65 md:text-lg">
+        <p className="dulac-paragraph mx-auto mt-5 text-center text-dulac-cream/65">
           Các khung hình dưới đây là placeholder có chủ đích cho MVP, giữ đúng mood concept trong khi trailer và screenshot thật đang được phát triển.
         </p>
       </div>
@@ -37,7 +37,7 @@ export default function MediaSection() {
             </div>
             <div className="absolute bottom-5 left-5 right-5">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-dulac-cyan">Teaser</p>
-              <h3 className="mt-2 font-serif text-3xl font-black">{trailer}</h3>
+              <h3 className="dulac-title mt-2 font-serif text-3xl text-dulac-cream">{trailer}</h3>
             </div>
           </div>
         </article>

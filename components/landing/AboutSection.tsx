@@ -27,10 +27,10 @@ export default function AboutSection() {
               </div>
 
               {/* Nội dung */}
-              <h3 className="font-serif text-xl font-bold text-dulac-red mb-3">
+              <h3 className="dulac-title font-serif text-xl text-dulac-amber mb-3">
                 Sứ mệnh &ldquo;Sống lại&rdquo; giá trị cũ
               </h3>
-              <p className="text-dulac-ink/70 text-sm leading-relaxed mb-4">
+              <p className="dulac-paragraph text-dulac-ink/70 mb-4">
                 Chúng tôi là một nhóm sinh viên mang trong mình tình yêu cháy bỏng với cội nguồn. Nhận thấy người trẻ ngày nay dần xa rời những giá trị truyền thống vì sách vở quá khó khan, Du Lạc ra đời với định vị là một <strong className="text-dulac-brown">Gaming Hub Văn Hóa</strong>.
               </p>
               <p className="text-dulac-ink/70 text-sm leading-relaxed">

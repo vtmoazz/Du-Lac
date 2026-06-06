@@ -20,8 +20,8 @@
   --color-dulac-paper:     #1E1A17;
 
   /* ── Fonts ── */
-  --font-serif: "Noto Serif Display", Georgia, serif;
-  --font-sans:  "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  --font-serif: "Saira", Georgia, sans-serif;   /* Title & Subtitle */
+  --font-sans:  "Montserrat", Inter, system-ui, sans-serif;  /* Paragraph */
   --font-mono:  "JetBrains Mono", monospace;
 
   /* ── Custom shadows ── */
@@ -181,4 +181,46 @@ html { scroll-behavior: smooth; }
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ─────────────────────────────────────────
+   Du Lạc Typography System
+   Title  : Saira, UPPERCASE, Bold (700)
+   Subtitle: Saira, normal-case, Semi-bold (600)
+   Paragraph: Montserrat, normal-case, Regular (400), small
+───────────────────────────────────────── */
+
+/* Title — chữ in hoa, Saira, Bold, màu Vàng/Be tuỳ nền */
+.dulac-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+/* Subtitle — chữ thường, Saira, Semi-bold */
+.dulac-subtitle {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+}
+
+/* Paragraph — chữ thường, Montserrat, Regular, nhỏ */
+.dulac-paragraph {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  text-transform: none;
+  font-size: 0.875rem;  /* text-sm */
+  line-height: 1.75;
+}
+
+/* Gradient title — dùng cho hero section (Xanh Vàng Be) */
+.title-gradient {
+  background: linear-gradient(135deg, #7FE7C4 0%, #D9A441 50%, #FFF8E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

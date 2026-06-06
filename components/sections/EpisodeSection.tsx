@@ -14,13 +14,13 @@ export default function EpisodeSection() {
           <p className="section-divider text-sm font-bold uppercase tracking-[0.22em] text-dulac-cyan">
             Episode Showcase
           </p>
-          <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-6xl">
+          <h2 className="dulac-title mt-4 font-serif text-4xl text-dulac-amber md:text-6xl">
             {episodeOne.title}
           </h2>
-          <p className="mt-5 text-lg leading-8 text-dulac-cream/74">{episodeOne.subtitle}</p>
+          <p className="dulac-subtitle mt-5 font-serif text-base text-dulac-cream/90">{episodeOne.subtitle}</p>
 
           {/* Only first paragraph — second is redundant */}
-          <p className="mt-6 text-base leading-8 text-dulac-cream/65">
+          <p className="dulac-paragraph mt-6 text-dulac-cream/65">
             {episodeOne.paragraphs[0]}
           </p>
 

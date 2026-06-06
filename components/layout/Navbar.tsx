@@ -34,8 +34,8 @@ export default function Navbar() {
         <Link
           href="/"
           className={cn(
-            'group font-serif text-2xl font-black tracking-wide transition-colors',
-            scrolled || menuOpen ? 'text-dulac-red' : 'text-dulac-cream'
+            'dulac-title group font-serif text-2xl transition-colors',
+            scrolled || menuOpen ? 'text-dulac-amber' : 'text-dulac-cream'
           )}
           onClick={() => setMenuOpen(false)}
         >
@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Button variant="primary" size="sm" href="#community" className="hidden md:inline-flex">
             <Heart size={16} />
-            Wishlist
+            Trải nghiệm
           </Button>
 
           <button
@@ -95,7 +95,7 @@ export default function Navbar() {
             ))}
             <Button variant="primary" size="md" href="#community" className="mt-2 w-full">
               <Heart size={18} />
-              Wishlist
+              Trải nghiệm
             </Button>
           </nav>
         </div>

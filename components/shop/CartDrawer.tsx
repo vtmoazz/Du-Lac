@@ -80,10 +80,12 @@ export default function CartDrawer() {
         >
           <h2
             style={{
-              fontFamily: '"Noto Serif Display", serif',
+              fontFamily: 'var(--font-serif)',
               fontSize: '20px',
               fontWeight: 700,
-              color: '#5C3317',
+              textTransform: 'uppercase' as const,
+              letterSpacing: '0.04em',
+              color: '#D9A441',
               margin: 0,
               display: 'flex',
               alignItems: 'center',

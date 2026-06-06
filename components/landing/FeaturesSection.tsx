@@ -60,10 +60,12 @@ export default function FeaturesSection() {
               <div>
                 <h3
                   style={{
-                    fontFamily: 'Noto Serif Display, Georgia, serif',
-                    fontWeight: 600,
-                    color: '#5C3317',
-                    fontSize: '1.125rem',
+                    fontFamily: 'var(--font-serif)',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.04em',
+                    color: '#D9A441',
+                    fontSize: '1rem',
                     marginBottom: '0.5rem',
                   }}
                 >
@@ -71,9 +73,10 @@ export default function FeaturesSection() {
                 </h3>
                 <p
                   style={{
+                    fontFamily: 'var(--font-sans)',
                     color: 'rgba(44,24,16,0.65)',
                     fontSize: '0.875rem',
-                    lineHeight: '1.6',
+                    lineHeight: '1.75',
                   }}
                 >
                   {f.desc}
